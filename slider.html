@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniform Collection Slider</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .uniform-slider {
+            padding: 6px 0;
+        }
+
+        .uniform-card {
+            position: relative;
+            height: 675px;
+            overflow: hidden;
+            background: #d6d3ce;
+        }
+
+        .uniform-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .uniform-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Collection text box */
+        .collection-box {
+            position: absolute;
+            top: 28%;
+            left: 20%;
+            width: 60%;
+            height: 42%;
+            border: 2px solid rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .collection-box h2 {
+            font-size: clamp(19px, 2vw, 40px);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .collection-line {
+            width: 45px;
+            height: 2px;
+            background: white;
+            margin: 12px 0;
+        }
+
+        .collection-box p {
+            font-size: clamp(9px, 1vw, 16px);
+            letter-spacing: 6px;
+            margin: 0;
+        }
+
+        /* Slider arrows */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 46px;
+            top: 45%;
+            bottom: auto;
+            background: rgba(40, 40, 40, 0.65);
+            opacity: 1;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .uniform-card {
+                height: 430px;
+            }
+
+            .collection-box {
+                left: 10%;
+                width: 80%;
+                height: 40%;
+            }
+
+            .collection-box p {
+                letter-spacing: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="uniformSlider"
+     class="carousel slide uniform-slider"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+    <div class="carousel-inner">
+
+        <!-- SLIDE 1: Four Collections -->
+        <div class="carousel-item active">
+            <div class="container-fluid px-1">
+                <div class="row g-3">
+
+                    <!-- Navy -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=85"
+                                 alt="Navy Collection">
+                            <div class="collection-box">
+                                <h2>NAVY</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khaki -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85"
+                                 alt="Khaki Collection">
+                            <div class="collection-box">
+                                <h2>KHAKI</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chrome -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
+                                 alt="Chrome Collection">
+                            <div class="collection-box">
+                                <h2>CHROME</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charcoal -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
+                                 alt="Charcoal Collection">
+                            <div class="collection-box">
+                                <h2>CHARCOAL</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: Black Collection -->
+        <div class="carousel-item">
+            <div class="container-fluid px-1">
+                <div class="row g-3">
+
+                    <!-- Black Collection -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=85"
+                                 alt="Black Collection">
+                            <div class="collection-box">
+                                <h2>BLACK</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formal -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
+                                 alt="Formal Collection">
+                            <div class="collection-box">
+                                <h2>FORMAL</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classic -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
+                                 alt="Classic Collection">
+                            <div class="collection-box">
+                                <h2>CLASSIC</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="col-6 col-lg-3">
+                        <div class="uniform-card">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85"
+                                 alt="Premium Collection">
+                            <div class="collection-box">
+                                <h2>PREMIUM</h2>
+                                <div class="collection-line"></div>
+                                <p>COLLECTION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Previous Arrow -->
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#uniformSlider"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <!-- Next Arrow -->
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#uniformSlider"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
